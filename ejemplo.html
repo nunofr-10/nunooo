@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplo · Nuno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">N</div>
+      Nuno
+    </a>
+    <div class="nav-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="proceso.html">Proceso</a>
+      <a href="ejemplo.html" class="active">Ejemplo</a>
+      <a href="precios.html">Precios</a>
+      <a href="seguridad.html">Seguridad</a>
+    </div>
+    <a href="contacto.html" class="nav-cta">Contactar</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Ejemplo</div>
+    <div class="eyebrow"><span class="dot"></span> Muestra de trabajo</div>
+    <h1>Así se ve una estructura tipo</h1>
+    <p>Esto es solo un ejemplo ilustrativo para que veas el estilo de organización. El servidor final se diseña siempre a medida de tu comunidad.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="example-wrap reveal">
+      <span class="example-badge">Ejemplo de plantilla</span>
+
+      <div class="example-grid">
+        <div class="example-sidebar">
+          <div class="channel-group">Información</div>
+          <div class="channel"><span class="hash">#</span> bienvenida</div>
+          <div class="channel"><span class="hash">#</span> reglas</div>
+          <div class="channel-group">General</div>
+          <div class="channel active"><span class="hash">#</span> charla-general</div>
+          <div class="channel"><span class="hash">#</span> memes</div>
+          <div class="channel-group">Staff</div>
+          <div class="channel"><span class="hash">#</span> mod-chat <span class="lock-icon">🔒</span></div>
+        </div>
+        <div class="example-main">
+          <div class="example-main-header"># charla-general</div>
+          <div class="example-msg">
+            <div class="example-avatar"></div>
+            <div>
+              <div class="example-msg-name">Bot de bienvenida <span>hoy 10:14</span></div>
+              <div class="example-msg-text">¡Bienvenido/a al servidor! Revisa #reglas antes de participar.</div>
+            </div>
+          </div>
+          <div class="example-msg">
+            <div class="example-avatar" style="background:linear-gradient(135deg,#57E39A,#B7C1FF)"></div>
+            <div>
+              <div class="example-msg-name">Miembro <span>hoy 10:16</span></div>
+              <div class="example-msg-text">Gracias, todo se ve muy ordenado por aquí.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="example-caption">Nota: nombres, canales y mensajes son inventados solo para mostrar el estilo de organización. Tu servidor tendrá su propia estructura, nombres y contenido.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>¿Quieres algo así, o completamente distinto?</h2>
+      <p>Este es solo un punto de partida. Hablamos y adaptamos la estructura a lo que necesita tu comunidad.</p>
+      <a href="contacto.html" class="btn-primary">Escríbeme por Discord →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>Nuno · Creación y seguridad de servidores de Discord</p>
+    <div class="footer-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="ejemplo.html">Ejemplo</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
