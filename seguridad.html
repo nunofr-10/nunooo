@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguridad · Nuno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">N</div>
+      Nuno
+    </a>
+    <div class="nav-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="proceso.html">Proceso</a>
+      <a href="ejemplo.html">Ejemplo</a>
+      <a href="precios.html">Precios</a>
+      <a href="seguridad.html" class="active">Seguridad</a>
+      <a href="bot-personalizado.html" class="nav-gold">Bot Personalizado ✨</a>
+    </div>
+    <a href="contacto.html" class="nav-cta">Contactar</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Seguridad</div>
+    <div class="eyebrow"><span class="dot"></span> Seguridad</div>
+    <h1>La seguridad no es un extra, es la base</h1>
+    <p>Un servidor bonito que se puede hackear o llenar de spam en una noche no sirve de nada. Por eso la seguridad se configura desde el primer día, no al final.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="security-grid">
+      <div class="reveal">
+        <div class="security-list">
+          <div class="security-list-item">
+            <div class="check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#57E39A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>Verificación de nuevos miembros</h3>
+              <p>Filtros de entrada para reducir bots y cuentas creadas para hacer daño.</p>
+            </div>
+          </div>
+          <div class="security-list-item">
+            <div class="check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#57E39A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>Permisos mínimos necesarios</h3>
+              <p>Cada rol tiene exactamente el permiso que necesita, ni uno más.</p>
+            </div>
+          </div>
+          <div class="security-list-item">
+            <div class="check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#57E39A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3>Registro de actividad</h3>
+              <p>Canales de logs para que el staff sepa qué pasa en el servidor en todo momento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="security-visual reveal">
+        <div class="sec-row">
+          <span class="sec-row-label">Verificación de entrada</span>
+          <span class="sec-row-value">Activa ✓</span>
+        </div>
+        <div class="sec-row">
+          <span class="sec-row-label">Protección anti-raid</span>
+          <span class="sec-row-value">Activa ✓</span>
+        </div>
+        <div class="sec-row">
+          <span class="sec-row-label">Filtro anti-spam</span>
+          <span class="sec-row-value">Activo ✓</span>
+        </div>
+        <div class="sec-row">
+          <span class="sec-row-label">Registro de moderación</span>
+          <span class="sec-row-value">Activo ✓</span>
+        </div>
+        <div class="sec-row">
+          <span class="sec-row-label">Permisos por rol</span>
+          <span class="sec-row-value">Revisados ✓</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Tu comunidad merece estar bien protegida</h2>
+      <p>Hablamos de qué riesgos tiene tu servidor y cómo cerrarlos desde el diseño.</p>
+      <a href="contacto.html" class="btn-primary">Escríbeme por Discord →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>Nuno · Creación y seguridad de servidores de Discord</p>
+    <div class="footer-links">
+      <a href="servicios.html">Servicios</a>
+      <a href="ejemplo.html">Ejemplo</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
